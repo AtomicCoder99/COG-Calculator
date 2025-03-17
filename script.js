@@ -45,11 +45,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (calculationType === 'invoice') {
             // Calculate COG percentage
             calculatedResult = 100 * ((wacValue - secondaryValue) / wacValue);
-            result.value = calculatedResult.toFixed(2) + '%';
+            result.value = 'COG is Cost -' + calculatedResult.toFixed(2) + '%';
         } else {
             // Calculate Invoice Price
             calculatedResult = wacValue - (wacValue * (secondaryValue / 100));
-            result.value = '$' + calculatedResult.toFixed(2);
+            result.value = 'Invoice Price is $' + calculatedResult.toFixed(2);
         }
     });
 
